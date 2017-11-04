@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
+import { PostService } from './post.service';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [PostService]
 })
 export class AppComponent {
   title = 'Beca Angular Everis';
   colores = ['Rojo', 'Verde', 'Amarillo'];
   mostrarListaColores = true;
+  
 
 
   funcionAgregar(color){
@@ -22,6 +26,9 @@ export class AppComponent {
     this.mostrarListaColores = !this.mostrarListaColores;
   }
 
+ 
 }
+
+
 
 
